@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<robot name="synus_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Robot Motor Parameters -->
+  <xacro:property name="PI" value="3.1415926535897931" />
+  <!-- Degree to Radian Conversions -->
+  <xacro:property name="degrees_45" value="0.785398163" />
+  <xacro:property name="degrees_90" value="1.57079633" />
+  <xacro:property name="degrees_180" value="3.14159266" />
+  <xacro:property name="degrees_270" value="4.71239" />
+  <xacro:property name="baselink_offset_z" value="1.200" />
+
+  <xacro:property name="body_length_x" value="0.1650" />  <!-- width 235, length 165 -->
+  <xacro:property name="body_width_y" value="0.2" />
+  <xacro:property name="body_height_z" value="0.25" />
+  <xacro:property name="body_collision_x" value="2.20" />
+  <xacro:property name="body_collision_y" value="1.50" />
+  <xacro:property name="body_collision_z" value="2.2" />
+
+  <xacro:property name="lwheel_length" value="0.05" />
+  <xacro:property name="lwheel_radius" value="0.065" />  <!-- wheel diameter 130 pi -->
+  <xacro:property name="lwheel_offset_x" value="0.235" />
+  <xacro:property name="lwheel_offset_y" value="0.0" />
+  <xacro:property name="lwheel_offset_z" value="0.110" />
+  <xacro:property name="lwheel_joint_damping" value="1.0" />
+  <xacro:property name="lwheel_joint_friction" value="1.0" />
+  <xacro:property name="lwheel_joint_effort_limit" value="1000.0" />
+  <xacro:property name="lwheel_joint_velocity_limit" value="2000.0" />
+  <xacro:property name="lwheel_mechanical_reduction" value="1.0" />
+
+  <xacro:property name="rwheel_length" value="0.05" />
+  <xacro:property name="rwheel_radius" value="0.065" />  <!-- wheel diameter 130 pi -->
+  <xacro:property name="rwheel_offset_x" value="0.235" />
+  <xacro:property name="rwheel_offset_y" value="0.0" />
+  <xacro:property name="rwheel_offset_z" value="0.110" />
+  <xacro:property name="rwheel_joint_damping" value="1.0" />
+  <xacro:property name="rwheel_joint_friction" value="1.0" />
+  <xacro:property name="rwheel_joint_effort_limit" value="1000.0" />
+  <xacro:property name="rwheel_joint_velocity_limit" value="2000.0" />
+  <xacro:property name="rwheel_mechanical_reduction" value="1.0" />
+
+
+  <xacro:property name="steer_joint_damping" value="2.0" />
+  <xacro:property name="steer_joint_friction" value="1.0" />
+  <xacro:property name="steer_joint_effort_limit" value="100.0" />
+  <xacro:property name="steer_joint_velocity_limit" value="100.0" />
+
+  <xacro:property name="scanner_pos_x" value="0.0" />
+  <xacro:property name="scanner_pos_y" value="0.0" />
+  <xacro:property name="scanner_pos_z" value="0.2" />
+
+
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <!-- BASE_FOOTPRINT -->
+  <link name="base_footprint">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0.0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+
+  <!-- BASE_LINK (RED) -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0.085" rpy="0 0 0"/>
+      <!--origin xyz="0 0 ${baselink_offset_z}" rpy="${degrees_90} 0 0" /-->
+      <geometry>
+        <!--mesh filename="package://synus_robot_description/meshes/ss_body.stl" scale="0.001 0.001 0.001" /-->
+        <box size="${body_length_x} ${body_width_y} ${body_height_z}"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+    </visual>
+    <!--collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://synus_robot_description/meshes/ss_body.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision-->
+  </link>
+
+  <!-- LEFT WHEEL -->
+  <link name="lwheel">
+    <visual>
+      <geometry>
+        <cylinder length="${lwheel_length}" radius="${lwheel_radius}"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${degrees_90} 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_lwheel" type="continuous">
+    <parent link="base_link"/>
+    <child link="lwheel"/>
+    <origin xyz="0 0.115 0.046" rpy="0 0 ${degrees_90}"/>
+  </joint>
+
+  <!-- RIGHT WHEEL -->
+  <link name="rwheel">
+    <visual>
+      <geometry>
+        <cylinder length="${rwheel_length}" radius="${rwheel_radius}"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${degrees_90} 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_rwheel" type="continuous">
+    <parent link="base_link"/>
+    <child link="rwheel"/>
+    <origin xyz="0 -0.115 0.046" rpy="0 0 -${degrees_90}"/>
+    <!--origin xyz="-${wheel_offset_x} ${wheel_offset_y} ${wheel_offset_z}" rpy="0 0 0" /-->
+    <!--limit effort="${steer_joint_effort_limit}" velocity="${steer_joint_velocity_limit}" lower="-${degrees_45}" upper="${degrees_45}"/-->
+    <!--joint_properties damping="${steer_joint_damping}" friction="${steer_joint_friction}"/-->
+  </joint>
+
+  <link name="scanner">
+    <visual>
+      <geometry>
+        <box size="0.015 0.045 0.015"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="red">
+        <color rgba="0.8 0.1 0.1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_scanner" type="fixed">
+    <parent link="base_link"/>
+    <child link="scanner"/>
+    <origin xyz="0 0 0.22" rpy="0 0 0"/>
+  </joint>
+
+  <link name="imu">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="red">
+        <color rgba="0.8 0.1 0.1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_imu" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu"/>
+    <origin xyz="0 0 0.046" rpy="0 0 0"/>
+  </joint>
+
+</robot>

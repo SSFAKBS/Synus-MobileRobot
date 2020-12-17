@@ -1,0 +1,19 @@
+<launch>
+
+  <arg name="urdf_file" default="$(find xacro)/xacro --inorder '$(find synus_description)/urdf/synus_robot.urdf'" />
+  <param name="robot_description" command="$(arg urdf_file)" />
+
+  <node pkg="synus_odometry" type="synus_odometry_node" name="synus_odometry_node">
+  </node>
+
+  <!--node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+  </node-->
+
+  <!--node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false" />
+  </node-->
+
+  <node pkg="robot_pose_publisher" type="robot_pose_publisher" name="robot_pose"/>
+
+</launch>
