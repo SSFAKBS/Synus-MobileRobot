@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>synus_teleop</name>
+  <maintainer email="kbs0309@synustech.com">KBS</maintainer>
+  <version>1.2.0</version>
+  <description>
+    Provides teleoperation using keyboard for TurtleBot3.
+  </description>
+  <license>KBS</license>
+  <author>KBS</author>
+  <author email="kbs0309@synustech.com">Darby Lim</author>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+  <depend>geometry_msgs</depend>
+</package>

@@ -1,0 +1,8 @@
+prefix=/home/kbs/catkin_ws2/devel
+
+Name: synus_slam
+Description: Description of synus_slam
+Version: 1.2.0
+Cflags: -I/home/kbs/catkin_ws2/src/synus_slam/include
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs

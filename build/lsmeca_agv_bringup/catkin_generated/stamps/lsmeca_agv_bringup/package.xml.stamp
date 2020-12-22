@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package>
+  <name>lsmeca_agv_bringup</name>
+  <version>1.0.0</version>
+  <description>
+    roslaunch scripts for starting the agv
+  </description>
+  <license>BSD</license>
+  <author email="abcd@abcd.com">Seoulpunk</author>
+  <maintainer email="abcd@abcd.com">Seoulpunk</maintainer>
+  <url type="website"></url>
+  <url type="repository"></url>
+  <url type="bugtracker"></url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+    
+  <run_depend>roscpp</run_depend>
+  <run_depend>rosserial_python</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>imu-filter-madgwick</run_depend>  
+  <run_depend>imu_calib</run_depend>
+  <run_depend>lsmeca_agv_description</run_depend>
+  <run_depend>lsmeca_agv_teleop</run_depend>
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>pepperl_fuchs_r2000</run_depend>
+  <run_depend>rosbridge_server</run_depend>
+  <export>
+  </export>
+</package>

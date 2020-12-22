@@ -1,0 +1,8 @@
+prefix=/home/kbs/catkin_ws2/install
+
+Name: synus_teleop
+Description: Description of synus_teleop
+Version: 1.2.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy geometry_msgs

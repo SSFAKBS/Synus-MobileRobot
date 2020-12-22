@@ -1,0 +1,8 @@
+prefix=/home/kbs/catkin_ws2/devel
+
+Name: synus_msgs
+Description: Description of synus_msgs
+Version: 0.0.1
+Cflags: -I/home/kbs/catkin_ws2/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs geometry_msgs

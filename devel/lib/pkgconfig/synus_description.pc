@@ -1,0 +1,8 @@
+prefix=/home/kbs/catkin_ws2/devel
+
+Name: synus_description
+Description: Description of synus_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: urdf xacro

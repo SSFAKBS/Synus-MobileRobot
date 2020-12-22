@@ -1,0 +1,2 @@
+hls_lfcd_lds_driver:robot_pose_publisher:rosauth:rosbridge_suite/rosapi:rosbridge_suite/rosbridge_library:rosbridge_suite/rosbridge_msgs:rosbridge_suite/rosbridge_server:rosbridge_suite/rosbridge_suite:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:synus_description:synus_msgs:synus_navigation:synus_odometry:synus_simulation:synus_slam:synus_teleop
+-DCATKIN_DEVEL_PREFIX=/home/kbs/catkin_ws2/devel -DCMAKE_INSTALL_PREFIX=/home/kbs/catkin_ws2/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/kbs/catkin_ws2/install
+
+Name: synus_simulation
+Description: Description of synus_simulation
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: stage_ros teb_local_planner move_base map_server amcl

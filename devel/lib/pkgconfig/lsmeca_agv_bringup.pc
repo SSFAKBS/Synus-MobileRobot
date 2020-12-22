@@ -1,0 +1,8 @@
+prefix=/home/kbs/catkin_ws2/devel
+
+Name: lsmeca_agv_bringup
+Description: Description of lsmeca_agv_bringup
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs sensor_msgs tf nav_msgs geometry_msgs

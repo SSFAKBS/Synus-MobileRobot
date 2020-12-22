@@ -1,0 +1,5 @@
+<launch>
+  <!-- Load the URDF model into the parameter server -->
+  <arg name="urdf_file" default="$(find xacro)/xacro --inorder '$(find synus_description)/urdf/synus_robot.urdf.xacro'" />
+  <param name="robot_description" command="$(arg urdf_file)" />
+</launch>
