@@ -1,0 +1,27 @@
+<launch>
+
+  <arg name="model" default="$(find synus_description)/urdf/synus_robot.urdf"/>
+  <arg name="gui" default="true" />
+  <arg name="urdf_file" default="$(find xacro)/xacro --inorder '$(find synus_description)/urdf/synus_robot.urdf'" />
+  <param name="robot_description" command="$(arg urdf_file)" />
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+
+  <node pkg="synus_odometry" type="synus_odometry_node" name="synus_odometry_node">
+  </node>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <node pkg="robot_pose_publisher" type="robot_pose_publisher" name="robot_pose"/>
+
+  <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" />
+
+  <arg name="multi_robot_name" default=""/>
+  <node pkg="rosserial_python" type="serial_node.py" name="display2" output="screen">
+   <param name="port" value="/dev/ttyACM0"/>
+   <param name="baud" value="115200"/>
+   <param name="tf_prefix" value="$(arg multi_robot_name)"/>
+  </node> 
+
+</launch>

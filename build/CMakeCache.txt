@@ -599,7 +599,7 @@ UBUNTU:BOOL=TRUE
 UBUNTU_XENIAL:BOOL=TRUE
 
 //Path to a file.
-_file_name:FILEPATH=/home/kbs/catkin_ws2/src/slam_gmapping/gmapping/test/basic_localization_laser_different_beamcount.test
+_file_name:FILEPATH=/home/kbs/catkin_ws2/src/rosserial/rosserial_test/test/rosserial_python_socket.test
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
@@ -634,8 +634,20 @@ class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/opt/ros/kinetic/share/diagnostic_updater/cmake
+
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/dynamic_reconfigure/cmake
+
+//Value Computed by CMake
+fira_maze_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/fira_maze
+
+//Value Computed by CMake
+fira_maze_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/fira_maze
 
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
@@ -734,6 +746,12 @@ lsmeca_agv_bringup_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/lsmeca_agv_bring
 //Value Computed by CMake
 lsmeca_agv_bringup_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/lsmeca_agv_bringup
 
+//Value Computed by CMake
+manager_ros_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/manager_ros
+
+//Value Computed by CMake
+manager_ros_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/manager_ros
+
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
 
@@ -742,6 +760,9 @@ message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for move_base_msgs.
+move_base_msgs_DIR:PATH=/opt/ros/kinetic/share/move_base_msgs/cmake
 
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
@@ -757,6 +778,9 @@ openslam_gmapping_DIR:PATH=/opt/ros/kinetic/share/openslam_gmapping/cmake
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
+
+//The directory containing a CMake configuration file for qt_build.
+qt_build_DIR:PATH=qt_build_DIR-NOTFOUND
 
 //Value Computed by CMake
 robot_pose_publisher_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/robot_pose_publisher
@@ -830,6 +854,9 @@ rosgraph_DIR:PATH=/opt/ros/kinetic/share/rosgraph/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
 
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/kinetic/share/roslaunch/cmake
+
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/kinetic/share/roslib/cmake
 
@@ -842,6 +869,102 @@ rospack_DIR:PATH=/opt/ros/kinetic/share/rospack/cmake
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
 
+//Value Computed by CMake
+rosserial_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial
+
+//Value Computed by CMake
+rosserial_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial
+
+//Value Computed by CMake
+rosserial_arduino_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_arduino
+
+//Value Computed by CMake
+rosserial_arduino_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_arduino
+
+//Value Computed by CMake
+rosserial_client_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_client
+
+//The directory containing a CMake configuration file for rosserial_client.
+rosserial_client_DIR:PATH=/home/kbs/catkin_ws2/devel/share/rosserial_client/cmake
+
+//Value Computed by CMake
+rosserial_client_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_client
+
+//Value Computed by CMake
+rosserial_embeddedlinux_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_embeddedlinux
+
+//Value Computed by CMake
+rosserial_embeddedlinux_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_embeddedlinux
+
+//Value Computed by CMake
+rosserial_mbed_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_mbed
+
+//Value Computed by CMake
+rosserial_mbed_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_mbed
+
+//Value Computed by CMake
+rosserial_msgs_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_msgs
+
+//The directory containing a CMake configuration file for rosserial_msgs.
+rosserial_msgs_DIR:PATH=/home/kbs/catkin_ws2/devel/share/rosserial_msgs/cmake
+
+//Value Computed by CMake
+rosserial_msgs_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_msgs
+
+//Value Computed by CMake
+rosserial_python_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_python
+
+//The directory containing a CMake configuration file for rosserial_python.
+rosserial_python_DIR:PATH=/home/kbs/catkin_ws2/devel/share/rosserial_python/cmake
+
+//Value Computed by CMake
+rosserial_python_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_python
+
+//Value Computed by CMake
+rosserial_server_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_server
+
+//The directory containing a CMake configuration file for rosserial_server.
+rosserial_server_DIR:PATH=/home/kbs/catkin_ws2/devel/share/rosserial_server/cmake
+
+//Value Computed by CMake
+rosserial_server_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_server
+
+//Value Computed by CMake
+rosserial_test_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_test
+
+//Value Computed by CMake
+rosserial_test_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_test
+
+//Value Computed by CMake
+rosserial_tivac_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_tivac
+
+//Value Computed by CMake
+rosserial_tivac_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_tivac
+
+//Value Computed by CMake
+rosserial_vex_cortex_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_vex_cortex
+
+//Value Computed by CMake
+rosserial_vex_cortex_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_vex_cortex
+
+//Value Computed by CMake
+rosserial_vex_v5_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_vex_v5
+
+//Value Computed by CMake
+rosserial_vex_v5_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_vex_v5
+
+//Value Computed by CMake
+rosserial_windows_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_windows
+
+//Value Computed by CMake
+rosserial_windows_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_windows
+
+//Value Computed by CMake
+rosserial_xbee_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/rosserial/rosserial_xbee
+
+//Value Computed by CMake
+rosserial_xbee_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/rosserial/rosserial_xbee
+
 //The directory containing a CMake configuration file for rostest.
 rostest_DIR:PATH=/opt/ros/kinetic/share/rostest/cmake
 
@@ -850,6 +973,15 @@ rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
+
+//Dependencies for the target
+sick_tim_3xx_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;usb-1.0;
+
+//Value Computed by CMake
+sick_tim_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/sick_tim
+
+//Value Computed by CMake
+sick_tim_SOURCE_DIR:STATIC=/home/kbs/catkin_ws2/src/sick_tim
 
 //Value Computed by CMake
 slam_gmapping_BINARY_DIR:STATIC=/home/kbs/catkin_ws2/build/slam_gmapping/slam_gmapping
@@ -925,6 +1057,9 @@ tf2_ros_DIR:PATH=/opt/ros/kinetic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/kinetic/share/tf/cmake
+
+//The directory containing a CMake configuration file for topic_tools.
+topic_tools_DIR:PATH=/opt/ros/kinetic/share/topic_tools/cmake
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/kinetic/share/trajectory_msgs/cmake
@@ -1121,7 +1256,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=36
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1460,5 +1595,40 @@ _OPENSSL_openssl_PREFIX:INTERNAL=
 _OPENSSL_openssl_VERSION:INTERNAL=
 __pkg_config_checked_OGRE_PKGC:INTERNAL=1
 __pkg_config_checked__OPENSSL:INTERNAL=1
+__pkg_config_checked_libusb:INTERNAL=1
+libusb_CFLAGS:INTERNAL=-I/usr/include/libusb-1.0
+libusb_CFLAGS_I:INTERNAL=
+libusb_CFLAGS_OTHER:INTERNAL=
+libusb_FOUND:INTERNAL=1
+libusb_INCLUDEDIR:INTERNAL=/usr/include
+libusb_INCLUDE_DIRS:INTERNAL=/usr/include/libusb-1.0
+libusb_LDFLAGS:INTERNAL=-lusb-1.0
+libusb_LDFLAGS_OTHER:INTERNAL=
+libusb_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+libusb_LIBRARIES:INTERNAL=usb-1.0
+libusb_LIBRARY_DIRS:INTERNAL=
+libusb_LIBS:INTERNAL=
+libusb_LIBS_L:INTERNAL=
+libusb_LIBS_OTHER:INTERNAL=
+libusb_LIBS_PATHS:INTERNAL=
+libusb_PREFIX:INTERNAL=/usr
+libusb_STATIC_CFLAGS:INTERNAL=-I/usr/include/libusb-1.0
+libusb_STATIC_CFLAGS_I:INTERNAL=
+libusb_STATIC_CFLAGS_OTHER:INTERNAL=
+libusb_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/libusb-1.0
+libusb_STATIC_LDFLAGS:INTERNAL=-lusb-1.0;-ludev;-pthread
+libusb_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+libusb_STATIC_LIBDIR:INTERNAL=
+libusb_STATIC_LIBRARIES:INTERNAL=usb-1.0;udev
+libusb_STATIC_LIBRARY_DIRS:INTERNAL=
+libusb_STATIC_LIBS:INTERNAL=
+libusb_STATIC_LIBS_L:INTERNAL=
+libusb_STATIC_LIBS_OTHER:INTERNAL=
+libusb_STATIC_LIBS_PATHS:INTERNAL=
+libusb_VERSION:INTERNAL=1.0.20
+libusb_libusb-1.0_INCLUDEDIR:INTERNAL=
+libusb_libusb-1.0_LIBDIR:INTERNAL=
+libusb_libusb-1.0_PREFIX:INTERNAL=
+libusb_libusb-1.0_VERSION:INTERNAL=
 prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 
